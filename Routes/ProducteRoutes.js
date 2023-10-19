@@ -12,6 +12,7 @@ class ProducteRoutes{
     }
     getRoutes(){
      this.router.get('/Products',ProducteController.GetAllProduct)
+     this.router.get('/Products/Published',ProducteController.GetPhublishedProducte)
      this.router.get('/Products/:id',ProducteController.GetProductByID)
      this.router.get('/Search/Products/:key',ProducteController.SearchProduct)
     }

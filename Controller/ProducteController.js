@@ -12,6 +12,16 @@ class ProducteController {
             res.status(500).json({ error: 'Internal server error' });
           }
     }
+    static async GetPhublishedProducte(req,res){
+        try {
+            // Retrieve all products from the database
+            const products = await Producte.find({Published:true});
+        
+            res.status(200).json(products);
+          } catch (error) {
+            res.status(500).json({ error: 'Internal server error' });
+          }
+    }
 
     static async GetProductByID(req,res){
         try {
