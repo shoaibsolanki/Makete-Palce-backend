@@ -110,7 +110,7 @@ class ProducteController {
             // Delete the product
             const result = await Producte.deleteOne({ _id: productId });
         
-            res.status(204).send({message:"Product deleted Successfully"}); // Respond with a 204 status (No Content) to indicate successful deletion
+            res.status(200).send({message:"Product deleted Successfully"}); // Respond with a 204 status (No Content) to indicate successful deletion
           } catch (error) {
             res.status(500).json({ error: 'Internal server error' });
           }
